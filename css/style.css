@@ -606,7 +606,7 @@ margin-bottom: 40px;
     cursor: pointer;
 
 }
-.portfolio .portfolio-item-inner .portfolio-img img{
+.portfolio .portfolio-item-inner .portfolio-img  img{
     width: 100%;
     display: block;
 }
@@ -713,23 +713,145 @@ margin-bottom: 40px;
     flex: 0 0 100%;
     max-width: 100%;
  }
- .home .home-img{
-    display: none;
- }
-}
-@media(max-width:767px){
-.contact .contact-form .col-6,
-.contact .contact-info-item,
-.portfolio .portfolio-item,
-.about .about-content .experience,
-.about .about-content .education,
-.about .about-content .skills,
-.about .about-content .personal-info{
-    flex: 0 0 100%;
-    max-width: 100%;
+  .home .home-img{
+    order: -1; /* Moves image to top */
+     margin-bottom: 40px;
+    display: block;
+      align-items: center;
+    text-align: center;
+    justify-content: center;
+ } 
+ .home-img::after,
+  .home-img::before{
+   display: none;
 }
 }
 
+@media (max-width: 767px) {
+  .home {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .home .home-img {
+    order: -1; /* Moves image to top */
+    margin-bottom: 40px;
+    display: block;
+      align-items: center;
+    text-align: center;
+    justify-content: center;
+
+  }
+
+  .home .home-img img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .home .home-info {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  .about .about-content {
+    flex-direction: column;
+  }
+
+  .about .about-content .skills,
+  .about .about-content .personal-info,
+  .about .about-content .about-text,
+  .about .about-content .experience,
+  .about .about-content .education {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .row {
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .padd-15 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .section-title h2 {
+    font-size: 26px;
+  }
+  .home-img::after,
+  .home-img::before{
+   display: none;
+
+}
+  
+}
+
+
+ 
+
+
+ @media (max-width: 575px) {
+  .section-title h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .btn {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+
+  h3.hello, h3.my-profession {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .home-info p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .home .home-img img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .portfolio .portfolio-item,
+  .service .service-item,
+  .contact .contact-info-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .aside .logo a {
+    font-size: 24px;
+  }
+
+  .about .about-content .about-text h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .about .about-content .about-text p,
+  .about .about-content .skills .skill-item h5,
+  .about .about-content .timeline .timeline-text {
+    font-size: 14px;
+  }
+
+  .timeline .timeline-item {
+    padding-left: 25px;
+  }
+
+  .contact .contact-form .btn {
+    padding: 0 30px;
+    font-size: 14px;
+  }
+}
 
 
 
